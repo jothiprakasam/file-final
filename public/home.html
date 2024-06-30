@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Sharing Room</title>
+    <link rel="stylesheet" href="css/styles1.css" />
+  </head>
+  <body>
+    <header>
+      <img src="secure.jpeg" alt="Logo" class="logo" />
+      <div class="navbar">
+        <nav>
+          <ul>
+            <!-- <li><a href="#">Home</a></li> -->
+            <li><a href="#" id="productsNav">Home</a></li>
+            <!-- <li><a href="#" id="resourcesNav">Resources</a></li> -->
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div id="app">
+        <div class="page-container">
+          <div id="formContainer">
+            <form id="joinRoomForm">
+              <h1>Join</h1>
+              <input
+                type="text"
+                id="joinRoomName"
+                placeholder="Room Name"
+                required
+              />
+              <input
+                type="password"
+                id="joinRoomPassword"
+                placeholder="Password"
+                required
+              />
+              <button type="submit" class="join-btn">Join Room</button>
+              <p>
+                Want to create a room?
+                <a href="#" id="toggleToCreate">Create Room</a>
+              </p>
+            </form>
+
+            <form id="createRoomForm" style="display: none">
+              <h1>Create</h1>
+              <input
+                type="text"
+                id="roomName"
+                placeholder="Room Name"
+                required
+              />
+              <input
+                type="password"
+                id="roomPassword"
+                placeholder="Password"
+                required
+              />
+              <button type="submit" class="cr-btn">Create Room</button>
+              <p>
+                Already have a room? <a href="#" id="toggleToJoin">Join Room</a>
+              </p>
+            </form>
+
+            <div id="join-room-popup" class="popup">
+              <div class="popup-content">
+                <div class="progress-circle"></div>
+                <p>Joining Room...</p>
+              </div>
+            </div>
+
+            <div id="cr-room-popup" class="popup">
+              <div class="popup-content">
+                <div class="progress-circle"></div>
+                <p>Creating Room...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="roomDetails" style="display: none">
+        <h2>Room: <span id="roomNameDisplay"></span></h2>
+        <form id="uploadForm">
+          <input type="file" id="fileInput" required />
+          <button type="submit">Upload File</button>
+        </form>
+        <ul id="filesList"></ul>
+      </div>
+
+      <footer>
+        <p>&copy;2024 AccesoFrame Inc</p>
+      </footer>
+      <div class="bottom-navbar">
+        <a href="#" class="bottom-nav-item" id="aboutNav">About</a>
+        <a href="#" class="bottom-nav-item" id="privacyPolicyNav"
+          >Privacy Policy</a
+        >
+        <a href="#" class="bottom-nav-item" id="termsNav"
+          >Terms of Conditions</a
+        >
+        <a href="#" class="bottom-nav-item" id="contactUsNav">Contact Us</a>
+      </div>
+    </main>
+
+    <script src="js/index.js"></script>
+
+    <script src="scriptnav.js"></script>
+    <script src="scriptcr.js"></script>
+    <script src="js/create-room.js"></script>
+    <script src="js/join-room.js"></script>
+  </body>
+</html>

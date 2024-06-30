@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, rgb(225, 247, 255), #e5f4fc 15%);
+    color: #333;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Header */
+header {
+    background: #000000;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    from { top: -50px; }
+    to { top: 0; }
+}
+
+.logo {
+    float: left;
+    height: 40px;
+    margin: 0 20px;
+}
+
+.container {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.container:hover {
+    transform: rotateY(10deg) scale(1.05);
+    transition: transform 0.3s;
+    padding-top: 30vh;
+}
+
+.header-3d {
+    transform-style: preserve-3d;
+    perspective: 1200px;
+}
+
+.header-3d:hover {
+    transform: rotateX(10deg) scale(1.05);
+    transition: transform 0.3s;
+}
+
+.navbar {
+    margin-top: 1vh;
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+/* Main Content */
+main {
+    flex: 1;
+    padding-top: 15vh;
+    overflow-y: auto;
+    width: 100%;
+}
+/* Container */
+
+.container {
+    padding-top: 15%;
+    max-width: 900px;
+    width: 70%;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    border-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Headings */
+.container h1, .container h2, .container h3, .container h4 {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    color: #0010bd;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.container h2 {
+    font-size: 2rem;
+    color: #000000;
+    border-left: 4px solid #0010bd;
+    padding-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.container h3 {
+    font-size: 1.75rem;
+    color: #000000;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.container h4 {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Lists */
+.container ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.container ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.container ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+}
+
+.container li strong {
+    color: #333;
+}
+
+/* Links */
+.container a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.container a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 10vh;
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}
+
+/* Bottom Navbar */
+.bottom-navbar {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.bottom-nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.bottom-nav-item:hover {
+    transform: translateY(-5px);
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.bottom-nav-item.active {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .navbar {
+        margin-top: 1vh;
+        float: right;
+        margin-right: 20px;
+    }
+    
+    .navbar nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navbar nav ul li {
+        display: inline;
+        margin-left: 20px;
+    }
+    
+    .navbar nav ul li a {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 5px 10px;
+        transition: background 0.3s;
+    }
+    
+    .navbar nav ul li a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .container h2 {
+        font-size: 1.75rem;
+    }
+
+    .container h3 {
+        font-size: 1.5rem;
+    }
+
+    .container h4 {
+        font-size: 1.25rem;
+    }
+
+    .container p,
+    .container li {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .container h1 {
+        font-size: 1.75rem;
+    }
+
+    .container h2 {
+        font-size: 1.5rem;
+    }
+
+    .container h3 {
+        font-size: 1.25rem;
+    }
+
+    .container h4 {
+        font-size: 1rem;
+    }
+
+    .container p,
+    .container li {
+        font-size: 0.75rem;
+    }
+}
